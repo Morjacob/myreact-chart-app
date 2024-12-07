@@ -1,12 +1,18 @@
 {
-  "name": "myreact-chart-app",
+  "name": "react-chart-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "A React app with Chart.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",  
+    "start": "vite", 
+    "build": "vite build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "chart.js": "^4.4.7"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0"  
+  }
 }
+
