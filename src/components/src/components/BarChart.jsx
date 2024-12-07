@@ -24,4 +24,3 @@ const BarChart = ({ data }) => {
      return <ChartComponent type = "bar" data= {barChartData} options= {barChartOptions} />;
 };
 export default BarChart
-help
