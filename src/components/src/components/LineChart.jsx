@@ -1,26 +1,37 @@
 import ChartComponent from 'chart component'
 
 const LineChart = ({ data }) => {
-    const LineChartData = {
-      labels: financial_data.months,
+    const lineChartData = {
+      labels: data.months,
       datasets: [
         {
           label: 'Monthly profits',
-          data: data.sales,
+          data: data.profits,
           backgroundColor: 'rgba(75, 192, 192, 0.2)',
           borderColor: 'rgba(75, 192, 192, 1)',
           borderWidth: 1,
         },
       ],
     };
-
-    const LineChartOptions = {
-        scales: {
-            y: {
-                beginAtZero: true,
-            },
+    const lineChartOptions = {
+      responsive: true,
+      scales: {
+        x: {
+          title: {
+            display: true,
+            text: 'Months',  
+          },
         },
-     };
-     return <ChartComponent type = "line" data= {LineChartData} options= {LineChartOptions} />;
+        y: {
+          title: {
+            display: true,
+            text: 'Profits', 
+          },
+          beginAtZero: false,  
+        },
+      },
+    }
+
+     return <ChartComponent type = "line" data= {lineChartData} options= {lineChartOptions} />;
 };
 export default LineChart

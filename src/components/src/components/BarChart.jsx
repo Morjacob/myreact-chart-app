@@ -1,8 +1,11 @@
+
 import ChartComponent from 'chart component'
+
+
 
 const BarChart = ({ data }) => {
     const barChartData = {
-      labels: financial_data.months,
+      labels: data.months,
       datasets: [
         {
           label: 'Monthly Sales',
@@ -15,12 +18,32 @@ const BarChart = ({ data }) => {
     };
 
     const barChartOptions = {
-        scales: {
-            y: {
-                beginAtZero: true,
-            },
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top',
+          },
+          tooltip: {
+            enabled: true,
+          },
         },
-     };
+        scales: {
+          x: {
+            title: {
+              display: true,
+              text: 'Months',
+            },
+          },
+          y: {
+            title: {
+              display: true,
+              text: 'Sales',
+            },
+            beginAtZero: true,
+          },
+        },
+      }
+    
      return <ChartComponent type = "bar" data= {barChartData} options= {barChartOptions} />;
 };
 export default BarChart
