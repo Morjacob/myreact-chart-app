@@ -1,6 +1,6 @@
 
 import React from 'react';
-import ChartComponent from 'chart component';
+import ChartComponent from 'ChartComponent.js';
 
 const ScatterChart = ({ data }) => {
 
