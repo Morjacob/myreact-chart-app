@@ -1,3 +1,5 @@
+
+
 import ChartComponent from 'chart component'
 
 const LineChart = ({ data }) => {
@@ -19,13 +21,13 @@ const LineChart = ({ data }) => {
         x: {
           title: {
             display: true,
-            text: 'Months',  
+            text: 'Months',  // X axis labelled with "Months"
           },
         },
         y: {
           title: {
             display: true,
-            text: 'Profits', 
+            text: 'Profits', // Y axis labelled with profits
           },
           beginAtZero: false,  
         },

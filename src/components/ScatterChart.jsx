@@ -7,7 +7,7 @@ const ScatterChart = ({ data }) => {
     datasets: [
       {
         label: 'Expenses vs. Profits', 
-        data: data.expenses.map((expense, index) => ({
+        data: data.expenses.map((expense, index) => ({ //used to find array of data points
           x: expense,              
           y: data.profits[index],  
         })),
@@ -25,13 +25,13 @@ const ScatterChart = ({ data }) => {
       x: {
         title: {
           display: true,
-          text: 'Expenses',  
+          text: 'Expenses',  // x axis label
         },
       },
       y: {
         title: {
           display: true,
-          text: 'Profits',  
+          text: 'Profits',  // y axis label
         },
         beginAtZero: false,  
       },

@@ -30,13 +30,13 @@ const BarChart = ({ data }) => {
           x: {
             title: {
               display: true,
-              text: 'Months',
+              text: 'Months', // x axis
             },
           },
           y: {
             title: {
               display: true,
-              text: 'Sales',
+              text: 'Sales', // y axis
             },
             beginAtZero: true,
           },
