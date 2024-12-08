@@ -7,14 +7,14 @@ import ScatterChart from './components/ScatterChart';
 import BubbleChart from './components/BubbleChart';
 
 const App = () => {
-  const [chartData, setChartData] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [chartData, setChartData] = useState(null); //manages data fetched from api
+  const [loading, setLoading] = useState(true); //manages loadind data
 
-
+//will fetch the data from the public json and load into the charts
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/data.json'); 
+        const response = await fetch('financial_data.json'); 
         const data = await response.json();
         setChartData(data); 
         setLoading(false);  
