@@ -2,7 +2,6 @@
 import ChartComponent from 'chart component'
 
 
-
 const BarChart = ({ data }) => {
     const barChartData = {
       labels: data.months,
